@@ -100,7 +100,7 @@ const ScrapperV3 = () => {
     const translateAPI = async (payload) => {
         try {
             console.log(payload);
-            axios.post("http://127.0.0.1:8000/scrap/web-scrapping-v3/", payload).then((response) => {
+            axios.post("https://scrapper-api.techiebears.com/scrap/web-scrapping-v3/", payload).then((response) => {
                 setProductArray(response.data.json);
                 setScrapperOutput(response.data.data);
             }).catch((error) => {
